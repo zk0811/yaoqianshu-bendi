@@ -748,7 +748,8 @@
                         const worldTarget = new THREE.Vector3(0, 2, 40);
                         const invRot = mainGroup.quaternion.clone().invert();
                         target = worldTarget.applyQuaternion(invRot);
-                        scaleTarget = 5.0;
+                        // --- 修改处：将 scaleTarget 从 5.0 改为 3.5，使照片在聚焦时更小，适应竖屏 ---
+                        scaleTarget = 3.5;
                         this.mesh.quaternion.copy(invRot);
                     } else {
                         target = this.posScatter;
